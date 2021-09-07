@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Clientes">
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".ServicioActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".NuevoClienteActivity" />
         <activity android:name=".ClienteActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
