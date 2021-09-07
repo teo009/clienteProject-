@@ -35,5 +35,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        fbtBackk.setOnClickListener{
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

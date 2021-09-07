@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import kotlinx.android.synthetic.main.activity_cliente.*
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -33,11 +35,19 @@ class ClienteActivity : AppCompatActivity() {
 
             cliente = it
 
-            nombre_cliente.text = cliente.nombre
-            servicio_cliente.text = cliente.servicio
-            direccion_cliente.text = cliente.direccion
+            nombre_cliente.text = "Nombre: ${cliente.nombre}"
+            apellido_cliente.text = "Apellido: ${cliente.apellido}"
+            servicio_cliente.text = "Servicio: ${cliente.servicio}"
+            precio_servicio.text = "Precio: ${cliente.precio}"
+            direccion_cliente.text = "Direccion: ${cliente.direccion}"
+            nap_cliente.text = "Nro Nap: ${cliente.nap}"
+            celular_cliente.text = "Celular: ${cliente.celular}"
 
         })
+        fbtBack.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -59,6 +69,7 @@ class ClienteActivity : AppCompatActivity() {
                     database.clientes().delete(cliente)
                     this@ClienteActivity.finish()
                 }
+                Toast.makeText(this, "Cliente eliminado con éxito", Toast.LENGTH_SHORT).show()
             }
         }
         return super.onOptionsItemSelected(item)

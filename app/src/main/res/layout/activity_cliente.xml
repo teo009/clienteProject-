@@ -7,6 +7,18 @@
     tools:context=".ClienteActivity">
 
     <TextView
+        android:id="@+id/precio_servicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="32dp"
+        android:text="Precio"
+        android:textColor="#81F44336"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/servicio_cliente" />
+
+    <TextView
         android:id="@+id/nombre_cliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,21 +34,67 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="36dp"
         android:text="Servicio"
         android:textColor="#81F44336"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombre_cliente" />
+        app:layout_constraintTop_toBottomOf="@+id/apellido_cliente" />
 
     <TextView
         android:id="@+id/direccion_cliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="36dp"
         android:text="Direccion"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/servicio_cliente" />
+        app:layout_constraintTop_toBottomOf="@+id/precio_servicio" />
+
+    <TextView
+        android:id="@+id/apellido_cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="36dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombre_cliente" />
+
+    <TextView
+        android:id="@+id/celular_cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="52dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nap_cliente" />
+
+    <TextView
+        android:id="@+id/nap_cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/direccion_cliente" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbtBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/celular_cliente"
+        app:layout_constraintVertical_bias="0.248"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>
