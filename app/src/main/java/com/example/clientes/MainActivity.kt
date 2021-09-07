@@ -25,5 +25,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        add_cliente.setOnClickListener{
+            
+        }
+
     }
 }
