@@ -10,6 +10,7 @@ class Cliente (
     val nombre:String,
     val apellido:String,
     val servicio:String,
+    val precio:String,
     val celular:String,
     val nap:String,
     val direccion:String,
