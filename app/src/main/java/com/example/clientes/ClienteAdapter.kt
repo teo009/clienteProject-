@@ -14,7 +14,12 @@ class ClienteAdapter(private val mContext: Context, private val listaClientes: L
         val cliente = listaClientes[position]
 
         layout.nombre.text = cliente.nombre
-        layout.servicio.text = "${cliente.servicio}"
+        layout.apellido.text = cliente.apellido
+        layout.servicio.text = "Servicio: ${cliente.servicio}"
+        layout.precio.text = "Precio: ${cliente.precio}"
+        layout.celular.text = cliente.celular
+        layout.direccion.text = cliente.direccion
+        layout.nap.text = "Nap cliente: ${cliente.nap}"
 
         return layout
     }
