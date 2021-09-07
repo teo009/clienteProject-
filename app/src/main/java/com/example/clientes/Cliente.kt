@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 import java.io.Serializable
 
 @Entity(tableName = "clientes")
-data class Cliente (
+class Cliente (
 
     val nombre:String,
     val apellido:String,
@@ -14,6 +14,6 @@ data class Cliente (
     val nap:String,
     val direccion:String,
     @PrimaryKey(autoGenerate = true)
-    val uid: Int = 0
+    var idCliente: Int = 0
 
 ) : Serializable

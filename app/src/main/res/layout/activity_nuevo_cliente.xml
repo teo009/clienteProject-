@@ -10,40 +10,38 @@
         android:id="@+id/name_et"
         android:layout_width="320dp"
         android:layout_height="46dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="48dp"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/servicio_et"
-        android:layout_width="318dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="319dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="Servicio"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_et" />
+        app:layout_constraintTop_toBottomOf="@+id/apellido_et"
+        tools:layout_editor_absoluteX="47dp" />
 
     <EditText
         android:id="@+id/direccion_et"
         android:layout_width="316dp"
         android:layout_height="51dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
         android:hint="Direccion"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/servicio_et" />
+        app:layout_constraintTop_toBottomOf="@+id/nap_et" />
 
     <Button
         android:id="@+id/guardar_btn"
@@ -53,6 +51,44 @@
         android:text="Guardar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/direccion_et"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/apellido_et"
+        android:layout_width="317dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Apellido"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/name_et"
+        tools:layout_editor_absoluteX="49dp" />
+
+    <EditText
+        android:id="@+id/cel_et"
+        android:layout_width="319dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Celular"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/servicio_et" />
+
+    <EditText
+        android:id="@+id/nap_et"
+        android:layout_width="317dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Número Nap"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cel_et" />
 </androidx.constraintlayout.widget.ConstraintLayout>
