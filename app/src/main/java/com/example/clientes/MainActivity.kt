@@ -1,5 +1,6 @@
 package com.example.clientes
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -17,6 +18,12 @@ class MainActivity : AppCompatActivity() {
         val adapter = ClienteAdapter(this, listaClientes)
 
         lista.adapter = adapter
+
+        lista.setOnItemClickListener { parent, view, position, id ->
+            val intent = Intent(this, ClienteActivity::class.java)
+            intent.putExtra("cliente", listaClientes[position])
+            startActivity(intent)
+        }
 
     }
 }
