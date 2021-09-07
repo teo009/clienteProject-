@@ -18,6 +18,10 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this, NuevoClienteActivity::class.java)
             startActivity(intent)
         }
+        fbtAbout.setOnClickListener{
+            val intent = Intent(this, AboutActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }

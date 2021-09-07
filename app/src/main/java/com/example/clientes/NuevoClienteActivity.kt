@@ -34,30 +34,40 @@ class NuevoClienteActivity : AppCompatActivity() {
         val database = AppDatabase.getDatabase(this)
 
         guardar_btn.setOnClickListener {
-            val nombre = name_et.text.toString()
-            val apellido = apellido_et.text.toString()
-            val servicio = servicio_et.text.toString()
-            val precio = precio_et.text.toString()
-            val cel = cel_et.text.toString()
-            val nap = nap_et.text.toString()
-            val direccion = direccion_et.text.toString()
 
-            val cliente = Cliente(nombre, apellido, servicio, precio, cel, nap, direccion)
+            if (name_et.text.isEmpty() || servicio_et.text.isEmpty() || nap_et.text.isEmpty()
+                || direccion_et.text.isEmpty()
+            )
+            {
+                Toast.makeText(this, "Por favor rellenar los campos", Toast.LENGTH_SHORT)
+                    .show();
+            }else{
+                val nombre = name_et.text.toString()
+                val apellido = apellido_et.text.toString()
+                val servicio = servicio_et.text.toString()
+                val precio = precio_et.text.toString()
+                val cel = cel_et.text.toString()
+                val nap = nap_et.text.toString()
+                val direccion = direccion_et.text.toString()
 
-            if (idCliente != null) {
-                CoroutineScope(Dispatchers.IO).launch {
-                    cliente.idCliente = idCliente
-                    database.clientes().update(cliente)
-                    this@NuevoClienteActivity.finish()
+                val cliente = Cliente(nombre, apellido, servicio, precio, cel, nap, direccion)
+
+                if (idCliente != null) {
+                    CoroutineScope(Dispatchers.IO).launch {
+                        cliente.idCliente = idCliente
+                        database.clientes().update(cliente)
+                        this@NuevoClienteActivity.finish()
+                    }
+                    Toast.makeText(this, "Cliente editado con éxito", Toast.LENGTH_SHORT).show()
+                } else {
+                    CoroutineScope(Dispatchers.IO).launch {
+                        database.clientes().insertAll(cliente)
+                        this@NuevoClienteActivity.finish()
+                    }
+                    Toast.makeText(this, "Cliente agregado con éxito", Toast.LENGTH_SHORT).show()
                 }
-                Toast.makeText(this, "Cliente editado con éxito", Toast.LENGTH_SHORT).show()
-            } else {
-                CoroutineScope(Dispatchers.IO).launch {
-                    database.clientes().insertAll(cliente)
-                    this@NuevoClienteActivity.finish()
-                }
-                Toast.makeText(this, "Cliente agregado con éxito", Toast.LENGTH_SHORT).show()
             }
+
         }
     }
 }

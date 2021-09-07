@@ -59,28 +59,34 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:text="Nuevo Cliente"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="490dp" />
+        app:layout_constraintEnd_toStartOf="@+id/fbtNuevoCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fbtNuevoCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="72dp"
         android:clickable="true"
-        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24"
-        tools:layout_editor_absoluteX="283dp"
-        tools:layout_editor_absoluteY="477dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fbtClient"
+        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fbtServicios"
+        android:id="@+id/fbtAbout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="72dp"
         android:clickable="true"
-        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24"
-        tools:layout_editor_absoluteX="283dp"
-        tools:layout_editor_absoluteY="564dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fbtNuevoCliente"
+        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
 
     <TextView
         android:id="@+id/textView5"
@@ -88,6 +94,10 @@
         android:layout_height="wrap_content"
         android:text="Sobre Nosotros"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="579dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fbtAbout"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.34" />
 </androidx.constraintlayout.widget.ConstraintLayout>
